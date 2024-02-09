@@ -2,7 +2,7 @@
 
 **Overview**
 
-Sankalp Help is a comprehensive platform designed to provide support and assistance to individuals struggling with drug addiction. This repository contains the Flutter application, a Kotlin version using Compose for user interaction, and a React-based website that serves as an informational hub and connection point for NGOs, therapists, doctors, and other mental health practitioners.
+Sankalp is a comprehensive platform designed to provide support and assistance to individuals struggling with drug addiction. This repository contains the Flutter application, a Kotlin version using Compose for user interaction, and a React-based website that serves as an informational hub and connection point for NGOs, therapists, doctors, and other mental health practitioners.
 
 **Features**
 
