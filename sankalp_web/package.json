@@ -14,7 +14,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.10.0",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.6",
     "swiper": "^8.0.7",
     "web-vitals": "^2.1.0"
@@ -24,9 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn deploy",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-    
   },
   "eslintConfig": {
     "extends": [
