@@ -1,7 +1,7 @@
 {
   "name": "portofolio",
   "version": "0.1.0",
-  "homepage": "https://rachit-goyal1071.github.io/sankalp",
+  "homepage": "https://rachit-goyal1071.github.io/sankalp/sankalp_web",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
