@@ -1,3 +1,14 @@
+.heading{
+  font-family: 'Nunito', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+
+.first{
+  margin-top: 15px;
+}
+
 .row{
   display: flex;
   flex-direction: row;
@@ -61,14 +72,14 @@
   }
   .serviceBox.pink .service-icon,
   .serviceBox.pink .service-icon:after{
-  background-color: #E4667B;
+  background-color: #0B7274;
   }
   .serviceBox.pink .service-icon:before{
-  border-color: #E4667B;
+  border-color: #0B7274;
   border-left-color: transparent;
   border-top-color: transparent;
   }
-  .serviceBox.pink .title{ color: #E4667B; }
+  .serviceBox.pink .title{ color: #0B7274; }
   .serviceBox.purple .service-icon,
   .serviceBox.purple .service-icon:after{
   background-color: #583DA6;

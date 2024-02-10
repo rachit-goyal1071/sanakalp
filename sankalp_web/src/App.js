@@ -7,6 +7,8 @@ import Services from "./components/Services/Services";
 import Experience from "./components/Experience/Experience";
 import Works from "./components/Works/Works";
 import FAQ from "./components/FAQ/FAQ";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const theme = useContext(themeContext);
@@ -25,6 +27,8 @@ function App() {
       <Experience/>
       <Works/>
       <FAQ/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
