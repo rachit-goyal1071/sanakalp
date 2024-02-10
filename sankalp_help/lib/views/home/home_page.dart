@@ -3,7 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:sankalp_help/consts/widgets.dart';
+import 'package:sankalp_help/services/auth.dart';
 import 'package:sankalp_help/themes.dart';
+import 'package:sankalp_help/views/home/ngo_dashboard.dart';
+import 'package:sankalp_help/views/pages/index.dart';
 
 late TabController _tabController;
 
@@ -39,7 +42,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     int selectedValue = 0;
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         bottom: TabBar(
           controller: _tabController,
@@ -49,7 +52,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
      body: SafeArea(
        child: TabBarView(
          controller: _tabController,
-         children: [
+         children: const [
            NgoLogin(),
            PsyLogin(),
            OtherLogin()
@@ -66,41 +69,81 @@ class NgoLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController nameController = TextEditingController();
+    TextEditingController emailController = TextEditingController();
+    TextEditingController regIdController = TextEditingController();
+    TextEditingController contactController = TextEditingController();
+    TextEditingController addressController = TextEditingController();
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Center(
-        child: GlassmorphicContainer(
-          width: 290,
-          height: 358,
-          borderRadius: 15,
-          border: 2,
-          blur: 2,
-          linearGradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colour('FFFFFF').withOpacity(0.35),
-                Colour('FFFFFF').withOpacity(0.35),
-              ],
-              stops: [
-                0.1,
-                1,
-              ]),
-          borderGradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Colour('343A40').withOpacity(0.5),
-              Colour('343A40').withOpacity(0.5),
-            ],
-          ),
-          child: Column(
-            children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
-                child: entryField("Name", nameController, IconButton(onPressed: (){}, icon: Icon(Icons.supervised_user_circle_rounded))),
-              )
-            ],
+        child: SingleChildScrollView(
+          child: AnimatedContainer(
+            duration: Duration(milliseconds: 30),
+            margin: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom
+            ),
+            child: GlassmorphicContainer(
+              width: 290,
+              height: 358,
+              borderRadius: 15,
+              border: 2,
+              blur: 2,
+              linearGradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.white.withOpacity(0.35),
+                    Colors.white.withOpacity(0.35),
+                  ],
+                  stops: const [
+                    0.1,
+                    1,
+                  ]),
+              borderGradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colour('343A40').withOpacity(0.5),
+                  Colour('343A40').withOpacity(0.5),
+                ],
+              ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                    child: entryField("NGO Name", nameController, IconButton(onPressed: (){}, icon: Image.asset('assets/ngoIcon.png'))),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                    child: entryField("Email", emailController, IconButton(onPressed: (){}, icon: const Icon(Icons.email_outlined,color: Colors.red,))),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                    child: entryField("Registration Id", regIdController, IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration,color: Colors.cyan,))),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                    child: entryField("Contact", contactController, IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.phone,color: Colors.black,))),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                    child: entryField("Address", addressController, IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.home,color: Colors.purple,))),
+                  ),
+                  Center(child: ElevatedButton(
+                    onPressed: (){
+                      int parsedContact = int.parse(contactController.text);
+                      try{
+                        addNgoData(nameController.text, emailController.text, regIdController.text, parsedContact, addressController.text);
+                      }
+                      catch(e){
+                        print(e);
+                      }
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>IndexPage()));
+                    }, child: const Text("Submit"),
+                  ),)
+                ],
+              ),
+            ),
           ),
         )
       ),
@@ -114,9 +157,77 @@ class PsyLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController nameController = TextEditingController();
+    TextEditingController emailController = TextEditingController();
+    TextEditingController regIdController = TextEditingController();
+    TextEditingController contactController = TextEditingController();
+    TextEditingController addressController = TextEditingController();
     return Scaffold(
-      backgroundColor: Colors.white70,
-      body: Text("PsyLogin"),
+      backgroundColor: AppColors.backgroundColor,
+      body: Center(
+          child: GlassmorphicContainer(
+            width: 290,
+            height: 358,
+            borderRadius: 15,
+            border: 2,
+            blur: 2,
+            linearGradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.white.withOpacity(0.35),
+                  Colors.white.withOpacity(0.35),
+                ],
+                stops: const [
+                  0.1,
+                  1,
+                ]),
+            borderGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colour('343A40').withOpacity(0.5),
+                Colour('343A40').withOpacity(0.5),
+              ],
+            ),
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("NGO Name", nameController, IconButton(onPressed: (){}, icon: Image.asset('assets/ngoIcon.png'))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Email", emailController, IconButton(onPressed: (){}, icon: const Icon(Icons.email_outlined,color: Colors.red,))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Registration Id", regIdController, IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration,color: Colors.cyan,))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Contact", contactController, IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.phone,color: Colors.black,))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Address", addressController, IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.home,color: Colors.purple,))),
+                ),
+                Center(child: ElevatedButton(
+                  onPressed: (){
+                    int parsedContact = int.parse(contactController.text);
+                    try{
+                      addNgoData(nameController.text, emailController.text, regIdController.text, parsedContact, addressController.text);
+                    }
+                    catch(e){
+                      print(e);
+                    }
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const NGODashboard()));
+                  }, child: const Text("Submit"),
+                ),)
+              ],
+            ),
+          )
+      ),
     );
   }
 }
@@ -126,9 +237,78 @@ class OtherLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController nameController = TextEditingController();
+    TextEditingController emailController = TextEditingController();
+    TextEditingController regIdController = TextEditingController();
+    TextEditingController contactController = TextEditingController();
+    TextEditingController addressController = TextEditingController();
     return Scaffold(
-      backgroundColor: Colors.green,
-      body: Text("OtherLogin completed"),
+      backgroundColor: AppColors.backgroundColor,
+      body: Center(
+          child: GlassmorphicContainer(
+            width: 290,
+            height: 358,
+            borderRadius: 15,
+            border: 2,
+            blur: 2,
+            linearGradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.white.withOpacity(0.35),
+                  Colors.white.withOpacity(0.35),
+                ],
+                stops: const [
+                  0.1,
+                  1,
+                ]),
+            borderGradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colour('343A40').withOpacity(0.5),
+                Colour('343A40').withOpacity(0.5),
+              ],
+            ),
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("NGO Name", nameController, IconButton(onPressed: (){}, icon: Image.asset('assets/ngoIcon.png'))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Email", emailController, IconButton(onPressed: (){}, icon: const Icon(Icons.email_outlined,color: Colors.red,))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Registration Id", regIdController, IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration,color: Colors.cyan,))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Contact", contactController, IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.phone,color: Colors.black,))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 12),
+                  child: entryField("Address", addressController, IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.home,color: Colors.purple,))),
+                ),
+                Center(child: ElevatedButton(
+                  onPressed: (){
+                    int parsedContact = int.parse(contactController.text);
+                    try{
+                      addNgoData(nameController.text, emailController.text, regIdController.text, parsedContact, addressController.text);
+                    }
+                    catch(e){
+                      print(e);
+                    }
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const NGODashboard()));
+                  }, child: const Text("Submit"),
+                ),)
+              ],
+            ),
+          )
+      ),
+
     );
   }
 }

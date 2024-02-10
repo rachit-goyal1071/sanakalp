@@ -25,7 +25,7 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 FirebaseAuth auth = FirebaseAuth.instance;
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 const userCollection = "users";
-const canteenMenuItem = "menu_items";
+const ngoData = "ngoDetails";
 const cartCollection = "cart";
 
 class AuthService{
@@ -124,14 +124,15 @@ class AuthService{
   User? currentUser = auth.currentUser;
 }
 
-addMenuItem(dishName, dishPrice, dishImage, preparationTime, dishDesc, dishCategory) async {
-  CollectionReference<Map<String,dynamic>> itemsCollection = await firestore.collection(canteenMenuItem);
+addNgoData(name, email, regId, contactNo, address) async {
+  CollectionReference<Map<String,dynamic>> itemsCollection = await firestore.collection(ngoData);
   Map<String, dynamic> data={
-    "i_name": dishName,
-    "i_price": dishPrice,
-    "i_prep_time": preparationTime,
-    "i_desc": dishDesc,
-    "i_category": dishCategory,
+    "id": currentUser!.uid,
+    "name": name,
+    "email": email,
+    "regId": regId,
+    "contact": contactNo,
+    "address": address,
   };
   itemsCollection.add(data);
 

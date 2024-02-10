@@ -122,9 +122,9 @@ Widget entryField(String title,
     controller: controller,
     decoration: InputDecoration(
       contentPadding: EdgeInsets.only(top: 10, bottom: 10, left: 7),
-      focusColor: Colour('000000'),
+      focusColor: Colors.black,
       border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black)
+          borderSide: BorderSide(color: Colors.black,width: 2)
       ),
       focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.black, width: 1.5)
