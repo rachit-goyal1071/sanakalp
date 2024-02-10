@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/sankalp/sankalp_web/static/css/main.a83e097a.css",
-    "main.js": "/sankalp/sankalp_web/static/js/main.90273b09.js",
-    "static/media/Truefriends.svg": "/sankalp/sankalp_web/static/media/Truefriends.0731516460838fc34215a74a474c3f33.svg",
-    "index.html": "/sankalp/sankalp_web/index.html",
-    "main.a83e097a.css.map": "/sankalp/sankalp_web/static/css/main.a83e097a.css.map",
-    "main.90273b09.js.map": "/sankalp/sankalp_web/static/js/main.90273b09.js.map"
+    "main.css": "/sankalp/sankalp_web/src/static/css/main.a83e097a.css",
+    "main.js": "/sankalp/sankalp_web/src/static/js/main.5a07a581.js",
+    "static/media/Truefriends.svg": "/sankalp/sankalp_web/src/static/media/Truefriends.0731516460838fc34215a74a474c3f33.svg",
+    "index.html": "/sankalp/sankalp_web/src/index.html",
+    "main.a83e097a.css.map": "/sankalp/sankalp_web/src/static/css/main.a83e097a.css.map",
+    "main.5a07a581.js.map": "/sankalp/sankalp_web/src/static/js/main.5a07a581.js.map"
   },
   "entrypoints": [
     "static/css/main.a83e097a.css",
-    "static/js/main.90273b09.js"
+    "static/js/main.5a07a581.js"
   ]
 }
