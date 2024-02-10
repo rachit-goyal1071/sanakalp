@@ -6,6 +6,7 @@ import Intro from "./components/Intro/Intro";
 import Services from "./components/Services/Services";
 import Experience from "./components/Experience/Experience";
 import Works from "./components/Works/Works";
+import FAQ from "./components/FAQ/FAQ";
 
 function App() {
   const theme = useContext(themeContext);
@@ -23,6 +24,7 @@ function App() {
       <Services/>
       <Experience/>
       <Works/>
+      <FAQ/>
     </div>
   );
 }
