@@ -13,7 +13,7 @@ const Intro = () => {
     <div className="Intro" id="Intro">
       <div class="container">
 	<div class="avatar">
-    <div> hello World</div>
+    {/* <div> hello World</div> */}
 			<img src={frnds} alt="Skytsunami" />
 	</div>
   </div>
