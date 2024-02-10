@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { themeContext } from "./Context";
 import Intro from "./components/Intro/Intro";
 import Services from "./components/Services/Services";
+import Experience from "./components/Experience/Experience";
 
 function App() {
   const theme = useContext(themeContext);
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Intro/>
       <Services/>
+      <Experience/>
     </div>
   );
 }
