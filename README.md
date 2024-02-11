@@ -34,6 +34,7 @@ cd sankalp-help-flutter
 ```bash
 flutter pub get
 ```
+![flutter app](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/flutterapp.jpeg)
 
 **Usage**
 
@@ -47,6 +48,9 @@ Contributions are welcome! Please follow the contribution guidelines.
 ## Kotlin (Compose) Version
 
 The Kotlin version using Compose is available in a separate repository: `sankalp_user`.
+
+![kotlin app](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/kotlinapp1.jpeg)
+![kotlin app](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/kotlinapp2.jpeg)
 
 ## React Website
 
@@ -75,6 +79,9 @@ yarn install
 yarn start
 ```
 
+![web](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/webapp1.jpeg)
+![web](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/webapp2.jpeg)
+
 ## Backend
 
 Both the Flutter and Kotlin applications share a common backend hosted on Firebase. Make sure to set up Firebase credentials following the instructions in `Firebase Setup`.
@@ -91,7 +98,7 @@ This project is licensed under the MIT License.
 
 For any inquiries or support, please contact us at `sankalp.help@example.com`.
 
-I hope this is helpful!
+![You Are Not Alone](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG4wNGlpNHg4amdsNmdmeHZ5emZoNDJieGFkM2VvcXN4bHJwb2lvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uhBqa2QQiwS3v98m1I/giphy.gif)
 
 ## Conrtibutors
 [![Contributors](https://contrib.rocks/image?repo=rachit-goyal1071/sankalp)](https://github.com/rachit-goyal1071/sankalp/graphs/contributors)
