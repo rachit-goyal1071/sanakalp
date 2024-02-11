@@ -20,13 +20,13 @@ Sankalp is a comprehensive platform designed to provide support and assistance t
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/sankalp-help-flutter.git
+git clone https://github.com/rachit-goyal1071/sankalp.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd sankalp-help-flutter
+cd sankalp_help
 ```
 
 3. Install dependencies:
@@ -49,6 +49,20 @@ Contributions are welcome! Please follow the contribution guidelines.
 
 The Kotlin version using Compose is available in a separate repository: `sankalp_user`.
 
+**Installation**
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/rachit-goyal1071/sankalp.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd sankalp_user
+```
+
 <img src="./readme_assets/kotlinapp1.jpeg" alt="Image1" width="300">
 <img src="./readme_assets/kotlinapp2.jpeg" alt="Image1" width="300">
 
@@ -63,7 +77,7 @@ If you want to run the React app locally for development or testing purposes, fo
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/sankalp-help-react.git
+git clone https://github.com/rachit-goyal1071/sankalp.git
 
 ```
 ### Navigate to the project directory:
