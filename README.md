@@ -89,3 +89,6 @@ This project is licensed under the MIT License.
 For any inquiries or support, please contact us at `sankalp.help@example.com`.
 
 I hope this is helpful!
+
+## Conrtibutors
+[![Contributors](https://contrib.rocks/image?repo=rachit-goyal1071/sankalp)](https://github.com/rachit-goyal1071/sankalp/graphs/contributors)
