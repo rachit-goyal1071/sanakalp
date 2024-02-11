@@ -47,7 +47,30 @@ The Kotlin version using Compose is available in a separate repository: `sankalp
 
 ## React Website
 
-The React-based website is hosted on GitHub Pages. Visit Sankalp Help Website for more information.
+The React-based website is hosted on Vercel. Visit [Sankalp Help Website](https://sankalp-rho.vercel.app/) for more information.
+
+### Running the React App Locally
+
+If you want to run the React app locally for development or testing purposes, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/sankalp-help-react.git
+
+```
+### Navigate to the project directory:
+```bash
+cd sankalp-help-react
+```
+### Install dependencies:
+```bash
+yarn install
+```
+### Start the development server:
+```bash
+yarn start
+```
 
 ## Backend
 
@@ -66,3 +89,6 @@ This project is licensed under the MIT License.
 For any inquiries or support, please contact us at `sankalp.help@example.com`.
 
 I hope this is helpful!
+
+## Conrtibutors
+[![Contributors](https://contrib.rocks/image?repo=rachit-goyal1071/sankalp)](https://github.com/rachit-goyal1071/sankalp/graphs/contributors)

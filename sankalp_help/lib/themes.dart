@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 abstract class AppColors {
   // Primary Color Palette
   static const Color primaryColor = Color(0xFF4CAF50); // Green
   static const Color accentColor = Color(0xFF009688); // Teal
+
+  // Extra Xolors
+  static const Color extraColor = Color(0xFF979797);
+  static const Color extraLightColor = Color(0xFFB6B6B6);
+  static const Color logoLightColor = Color(0xFFffdaaa);
 
   // Background Color Palette
   static const Color backgroundColor = Color(0xFFF5F5F5); // Light Grey
@@ -14,6 +20,9 @@ abstract class AppColors {
 
   // Error/Alert Color Palette
   static const Color errorColor = Color(0xFFE57373); // Light Red
+
+  // Dark Card Color
+  static const Color cardDark = Color(0xFF303334); // You can customize this color
 }
 
 abstract class AppFonts {
@@ -34,7 +43,6 @@ abstract class AppTheme {
     fontFamily: AppFonts.defaultFontFamily,
     appBarTheme: AppBarTheme(
       color: AppColors.primaryColor,
-      brightness: Brightness.dark,
       iconTheme: IconThemeData(color: Colors.white),
     ),
     textTheme: TextTheme(
@@ -58,8 +66,7 @@ abstract class AppTheme {
     fontFamily: AppFonts.defaultFontFamily,
     appBarTheme: AppBarTheme(
       color: AppColors.primaryColor,
-      brightness: Brightness.dark,
-      iconTheme: IconThemeData(color: Colors.white),
+      iconTheme: IconThemeData(color: Colors.white), systemOverlayStyle: SystemUiOverlayStyle.light, // Set brightness here for the dark theme
     ),
     textTheme: TextTheme(
       headline6: TextStyle(color: AppColors.textColor, fontWeight: FontWeight.bold),
