@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./Works.css";
-// import Upwork from "../../img/Upwork.png";
-// import Fiverr from "../../img/fiverr.png";
-// import Amazon from "../../img/amazon.png";
-// import Shopify from "../../img/Shopify.png";
-// import Facebook from "../../img/Facebook.png";
+import firstwork from "../../img/icons8-anonymous-48.png"
+import secwork from "../../img/icons8-assistance-68.png"
+import thirdwork from "../../img/icons8-counseling-64.png"
+import fourthwork from "../../img/Assistance.png"
+import fifthwork from "../../img/icons8-social-64.png"
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 const Works = () => {
@@ -24,14 +24,13 @@ const Works = () => {
           </span>
           <span></span>
           <spane>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
+          With personalized support, local resources, and habit tracking features,
             <br />
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
+             we're committed to aiding your journey towards recovery. Let's take positive steps together.           
             <br />
-            y dummy text of printingLorem
+            Subscribe for exclusive access to video assistance and inspiring content. 
+            
             <br />
-            ispum is simpley dummy text of printing
           </spane>
           <div
             className="blur s-blur1"
@@ -50,19 +49,19 @@ const Works = () => {
           className="w-mainCircle"
         >
           <div className="w-secCircle">
-            {/* <img src={Upwork} alt="" /> */}
+            <img src={firstwork} alt="" />
           </div>
           <div className="w-secCircle">
-            {/* <img src={Fiverr} alt="" /> */}
+            <img src={secwork} alt="" />
           </div>
           <div className="w-secCircle">
-            {/* <img src={Amazon} alt="" /> */}
+            <img src={thirdwork} alt="" />
           </div>{" "}
           <div className="w-secCircle">
-            {/* <img src={Shopify} alt="" /> */}
+            <img src={fourthwork} alt="" />
           </div>
           <div className="w-secCircle">
-            {/* <img src={Facebook} alt="" /> */}
+            <img src={fifthwork} alt="" />
           </div>
         </motion.div>
         {/* background Circles */}

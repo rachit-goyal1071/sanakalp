@@ -34,7 +34,7 @@ const Services = () => {
         <div className="col-md-3 col-sm-6">
             <div className="serviceBox pink">
                 <div className="service-icon">
-                    {/* <span><i className="fa fa-rocket"></i></span> */}
+                <span><img src={first} alt="" className="first"/></span>
                 </div>
                 <h3 className="title">NGO Support:</h3>
                 <p className="description"> Receive additional assistance and resources through partnerships with NGOs.</p>
@@ -43,7 +43,7 @@ const Services = () => {
         <div className="col-md-3 col-sm-6">
             <div className="serviceBox">
                 <div className="service-icon">
-                    {/* <span><i className="fa fa-globe"></i></span> */}
+                <span><img src={first} alt="" className="first"/></span>
                 </div>
                 <h3 className="title">Subscription Model: </h3>
                 <p className="description">Get personalized video assistance from experts with our subscription-based service.</p>
@@ -52,7 +52,7 @@ const Services = () => {
         <div className="col-md-3 col-sm-6">
             <div className="serviceBox">
                 <div className="service-icon">
-                    {/* <span><i className="fa fa-globe"></i></span> */}
+                <span><img src={first} alt="" className="first"/></span>
                 </div>
                 <h3 className="title">Habit Tracking:</h3>
                 <p className="description"> Track progress and build positive habits with streaks feature. Plus, find inspiration in our reel section.</p>
