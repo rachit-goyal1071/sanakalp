@@ -1,0 +1,6 @@
+package com.example.sankalp.config
+
+
+const val APP_ID = "e38fe91a06a34285b10ced116759c6a6"
+
+val token = "007eJxTYBC5bDTX6e3S+3vPvRCtfWV56UXwHu3ePbkOZ3aFXZ68aHa3AkOqsUVaqqVhooFZorGJkYVpkqFBcmqKoaGZuallslmi2WOX46kNgYwMCawGLIwMEAjiszCUpBaXMDAAACj6Ia0="
