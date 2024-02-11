@@ -4,6 +4,8 @@
 
 Sankalp is a comprehensive platform designed to provide support and assistance to individuals struggling with drug addiction. This repository contains the Flutter application, a Kotlin version using Compose for user interaction, and a React-based website that serves as an informational hub and connection point for NGOs, therapists, doctors, and other mental health practitioners.
 
+![You Are Not Alone](https://media.giphy.com/media/V0UVbB1tZCL3ov0Iwx/giphy.gif)
+
 ## Features
 
 * **User Onboarding:** Seamless onboarding process for NGOs, therapists, doctors, and mental health practitioners.
@@ -41,9 +43,10 @@ Run the application on your preferred Flutter environment.
 
 Contributions are welcome! Please follow the contribution guidelines.
 
+
 ## Kotlin (Compose) Version
 
-The Kotlin version using Compose is available in a separate repository: `sankalp-help-compose`.
+The Kotlin version using Compose is available in a separate repository: `sankalp_user`.
 
 ## React Website
 
