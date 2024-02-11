@@ -34,7 +34,7 @@ cd sankalp-help-flutter
 ```bash
 flutter pub get
 ```
-![flutter app](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/flutterapp.jpeg)
+<img src="./readme_assets/flutterapp.jpeg" alt="Image1" width="300">
 
 **Usage**
 
@@ -49,8 +49,8 @@ Contributions are welcome! Please follow the contribution guidelines.
 
 The Kotlin version using Compose is available in a separate repository: `sankalp_user`.
 
-![kotlin app](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/kotlinapp1.jpeg)
-![kotlin app](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/kotlinapp2.jpeg)
+<img src="./readme_assets/kotlinapp1.jpeg" alt="Image1" width="300">
+<img src="./readme_assets/kotlinapp2.jpeg" alt="Image1" width="300">
 
 ## React Website
 
@@ -79,8 +79,8 @@ yarn install
 yarn start
 ```
 
-![web](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/webapp1.jpeg)
-![web](https://github.com/rachit-goyal1071/sankalp/blob/main/readme_assets/webapp2.jpeg)
+<img src="./readme_assets/webapp1.jpeg" alt="Image1" width="400">
+<img src="./readme_assets/webapp2.jpeg" alt="Image1" width="400">
 
 ## Backend
 
