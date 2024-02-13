@@ -119,6 +119,7 @@ Widget entryField(String title,
     TextEditingController controller, IconButton? icon) {
   return TextField(
     cursorColor: Colors.black,
+    style: TextStyle(color: Colors.black),
     controller: controller,
     decoration: InputDecoration(
       contentPadding: EdgeInsets.only(top: 10, bottom: 10, left: 7),
@@ -130,6 +131,7 @@ Widget entryField(String title,
           borderSide: BorderSide(color: Colors.black, width: 1.5)
       ),
       labelText: title,
+      fillColor: Colors.black,
       labelStyle: TextStyle(
           color: Colors.black
       ),
@@ -163,3 +165,25 @@ Widget entryField(String title,
 //     ),
 //   );
 // }
+
+class InfoBannerActionsFb1 extends StatelessWidget {
+  final Icon icon;
+  final Color primaryColor;
+  final List<TextButton> actions;
+  final String text;
+
+  const InfoBannerActionsFb1(
+      {required this.icon, required this.actions, required this.text, this.primaryColor = Colors.blue, Key? key})
+      : super(key: key) ;
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: MaterialBanner(
+        content: Text(text, style: TextStyle(color: primaryColor),),
+        leading: CircleAvatar(child: icon,backgroundColor: primaryColor,),
+        actions: actions,
+      ),
+    );
+  }
+}

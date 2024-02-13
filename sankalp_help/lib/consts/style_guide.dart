@@ -72,6 +72,7 @@ final TextStyle basicWala2TextStyle = GoogleFonts.notoSans(
 final TextStyle chotiHeadingTextStyle = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.w400,
+  color: Colors.black
 );
 
 final Colour mainWalaColour = Colour(

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sankalp_help/views/home/home_page.dart';
+import 'package:sankalp_help/views/home/ngo_dashboard.dart';
 import 'package:sankalp_help/views/login_and_signup/login_page.dart';
 import 'package:sankalp_help/views/login_and_signup/signup_page.dart';
 
@@ -19,7 +20,7 @@ class _WidgetTreeState extends State<WidgetTree> {
     return StreamBuilder<User?>(stream: _auth.authStateChanges(),
         builder: (context,snapshot){
           if(snapshot.hasData){
-            return HomePage();
+            return NGODashboard();
           }
           else
             return SignupPage();
